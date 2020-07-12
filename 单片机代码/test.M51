@@ -1,0 +1,179 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/26/2018  08:50:29  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL\C51\BIN\BL51.EXE G:\test.obj TO G:\test PRINT (.\test.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  G:\test.obj (TEST)
+  D:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL\C51\LIB\C51S.LIB (?C?CLDPTR)
+  D:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  G:\test (TEST)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?TEST
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0019H     UNIT         ?C?LIB_CODE
+            CODE    001CH     0007H     UNIT         ?C_INITSEG
+            CODE    0023H     0003H     ABSOLUTE     
+            CODE    0026H     008CH     UNIT         ?C_C51STARTUP
+            CODE    00B2H     006EH     UNIT         ?CO?TEST
+            CODE    0120H     0030H     UNIT         ?PR?MAIN?TEST
+            CODE    0150H     0016H     UNIT         ?PR?INITSER?TEST
+            CODE    0166H     0014H     UNIT         ?PR?SERINT?TEST
+            CODE    017AH     0013H     UNIT         ?PR?_SENDALL?TEST
+            CODE    018DH     000AH     UNIT         ?PR?_SENDCHAR?TEST
+
+
+
+OVERLAY MAP OF MODULE:   G:\test (TEST)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?TEST
+  +--> ?C_INITSEG
+
+?PR?MAIN?TEST
+  +--> ?PR?INITSER?TEST
+  +--> ?CO?TEST
+  +--> ?PR?_SENDALL?TEST
+
+?PR?_SENDALL?TEST
+  +--> ?PR?_SENDCHAR?TEST
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/26/2018  08:50:29  PAGE 2
+
+
+
+
+SYMBOL TABLE OF MODULE:  G:\test (TEST)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        TEST
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  B:00A8H.4       PUBLIC        ES
+  D:00B8H         PUBLIC        IP
+  B:0098H.0       PUBLIC        RI
+  B:0098H.1       PUBLIC        TI
+  D:0008H         PUBLIC        receFlag
+  C:0120H         PUBLIC        main
+  D:0009H         PUBLIC        sendFlag
+  C:018DH         PUBLIC        _sendChar
+  D:0099H         PUBLIC        SBUF
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  C:017AH         PUBLIC        _sendAll
+  D:008DH         PUBLIC        TH1
+  B:0098H.7       PUBLIC        SM0
+  B:0098H.6       PUBLIC        SM1
+  D:008BH         PUBLIC        TL1
+  B:0088H.6       PUBLIC        TR1
+  C:0150H         PUBLIC        initSer
+  B:0098H.4       PUBLIC        REN
+  D:00C8H         PUBLIC        T2CON
+  C:00B2H         PUBLIC        TEXT0
+  C:00D1H         PUBLIC        TEXT1
+  C:0166H         PUBLIC        serInt
+  C:00E8H         PUBLIC        TEXT2
+  C:00FFH         PUBLIC        TEXT3
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:0120H         LINE#         19
+  C:0120H         LINE#         20
+  C:0120H         LINE#         21
+  C:0123H         LINE#         22
+  C:0123H         LINE#         23
+  C:0123H         LINE#         24
+  C:0127H         LINE#         25
+  C:0127H         LINE#         26
+  C:0130H         LINE#         27
+  C:0139H         LINE#         28
+  C:0142H         LINE#         29
+  C:014BH         LINE#         30
+  C:014EH         LINE#         31
+  -------         ENDPROC       MAIN
+  -------         PROC          SERINT
+  C:0166H         LINE#         35
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/26/2018  08:50:29  PAGE 3
+
+
+  C:0166H         LINE#         37
+  C:0169H         LINE#         38
+  C:0169H         LINE#         39
+  C:016BH         LINE#         40
+  C:016EH         LINE#         41
+  C:0171H         LINE#         42
+  C:0171H         LINE#         44
+  C:0174H         LINE#         45
+  C:0174H         LINE#         46
+  C:0176H         LINE#         47
+  C:0179H         LINE#         48
+  C:0179H         LINE#         49
+  -------         ENDPROC       SERINT
+  -------         PROC          _SENDCHAR
+  D:0007H         SYMBOL        Value
+  C:018DH         LINE#         52
+  C:018DH         LINE#         53
+  C:018DH         LINE#         54
+  C:018FH         LINE#         55
+  C:0192H         LINE#         56
+  C:0196H         LINE#         57
+  -------         ENDPROC       _SENDCHAR
+  -------         PROC          _SENDALL
+  D:0001H         SYMBOL        pValue
+  C:017AH         LINE#         59
+  C:017AH         LINE#         60
+  C:017AH         LINE#         61
+  C:0180H         LINE#         62
+  C:0180H         LINE#         63
+  C:0183H         LINE#         64
+  C:018AH         LINE#         65
+  C:018CH         LINE#         66
+  -------         ENDPROC       _SENDALL
+  -------         PROC          INITSER
+  C:0150H         LINE#         68
+  C:0150H         LINE#         69
+  C:0150H         LINE#         71
+  C:0153H         LINE#         72
+  C:0156H         LINE#         73
+  C:0159H         LINE#         74
+  C:015BH         LINE#         75
+  C:015DH         LINE#         76
+  C:015FH         LINE#         77
+  C:0161H         LINE#         78
+  C:0163H         LINE#         79
+  C:0165H         LINE#         80
+  -------         ENDPROC       INITSER
+  -------         ENDMOD        TEST
+
+  -------         MODULE        ?C?CLDPTR
+  C:0003H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+Program Size: data=11.0 xdata=0 code=407
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

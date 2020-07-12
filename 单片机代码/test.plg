@@ -1,0 +1,20 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\79174\Desktop\KEIL\test.uvproj
+Project File Date:  05/13/2018
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling test.c...
+linking...
+Program Size: data=11.0 xdata=0 code=407
+creating hex file from "G:\test"...
+"G:\test" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=11.0 xdata=0 code=407
+creating hex file from "G:\test"...
+"G:\test" - 0 Error(s), 0 Warning(s).
